@@ -10,40 +10,62 @@ pub fn navbar() -> Html {
     };
 
     html! {
-        <>
-            <nav class="bg-white/80 backdrop-blur-md shadow-lg px-6 py-4 flex justify-between items-center">
-                <h1 class="text-2xl font-bold text-pink-700">
-                    { "CEI" }
-                </h1>
-
-                <button
-                    onclick={toggle_menu}
-                    class="md:hidden text-pink-600 text-3xl font-bold focus:outline-none"
+        <header class="sticky top-0 z-50 w-full">
+            <div class="relative">
+                <nav
+                    class="
+                        bg-[#0b2545]/80 backdrop-blur-md shadow-lg
+                        px-6 py-4 flex justify-between items-center
+                        border-b border-white/10
+                    "
                 >
-                    { "≡" }
-                </button>
+                    <h1 class="text-2xl font-bold text-white tracking-tight">
+                        { "CEI" }
+                    </h1>
 
-                <div class="hidden md:flex gap-6 text-pink-700 font-semibold">
-                    <a href="#">{"Departamentos"}</a>
-                    <a href="#">{"Idiomas y cursos"}</a>
-                    <a href="#">{"Talleres"}</a>
-                </div>
-            </nav>
+                    <button
+                        onclick={toggle_menu}
+                        class="md:hidden text-white text-3xl font-bold focus:outline-none"
+                    >
+                        { if *menu_open { "✕" } else { "≡" } }
+                    </button>
 
-            {
+                    <div class="hidden md:flex gap-8 font-semibold">
+                        <a class="text-white/90 hover:text-white transition">
+                            { "Departamentos" }
+                        </a>
+                        <a class="text-white/90 hover:text-white transition">
+                            { "Idiomas y cursos" }
+                        </a>
+                        <a class="text-white/90 hover:text-white transition">
+                            { "Talleres" }
+                        </a>
+                    </div>
+                </nav>
+
                 if *menu_open {
-                    html! {
-                        <div class="md:hidden bg-white/70 backdrop-blur-md text-pink-700
-                                    flex flex-col px-6 py-4 gap-4 shadow-md">
-                            <a href="#">{"Departamentos"}</a>
-                            <a href="#">{"Idiomas y cursos"}</a>
-                            <a href="#">{"Talleres"}</a>
-                        </div>
-                    }
-                } else {
-                    html! {}
+                    <div
+                        class={classes!(
+                            "md:hidden", "absolute", "top-full", "left-0", "w-full",
+                            "bg-[#0b2545]/70", "backdrop-blur-xl",
+                            "text-white", "flex", "flex-col",
+                            "px-8", "py-8", "gap-6",
+                            "shadow-2xl", "border-t", "border-white/10",
+                            "animate-in", "fade-in", "slide-in-from-top-2", "duration-300"
+                        )}
+                    >
+                        <a class="text-lg font-bold hover:text-white/80 transition">
+                            { "Departamentos" }
+                        </a>
+                        <a class="text-lg font-bold hover:text-white/80 transition">
+                            { "Idiomas y cursos" }
+                        </a>
+                        <a class="text-lg font-bold hover:text-white/80 transition">
+                            { "Talleres" }
+                        </a>
+                    </div>
                 }
-            }
-        </>
+            </div>
+        </header>
     }
 }
