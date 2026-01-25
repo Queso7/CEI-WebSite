@@ -14,7 +14,7 @@ pub fn navbar() -> Html {
             <div class="relative">
                 <nav
                     class="
-                        bg-[#0b2545]/80 backdrop-blur-md shadow-lg
+                        bg-[#0b2545]/95 backdrop-blur-md shadow-lg
                         px-6 py-4 flex justify-between items-center
                         border-b border-white/10
                     "
@@ -47,7 +47,7 @@ pub fn navbar() -> Html {
                     <div
                         class={classes!(
                             "md:hidden", "absolute", "top-full", "left-0", "w-full",
-                            "bg-[#0b2545]/70", "backdrop-blur-xl",
+                            "bg-[#0b2545]/75", "backdrop-blur-xl",
                             "text-white", "flex", "flex-col",
                             "px-8", "py-8", "gap-6",
                             "shadow-2xl", "border-t", "border-white/10",
