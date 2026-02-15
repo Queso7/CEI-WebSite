@@ -29,25 +29,33 @@ pub fn navbar() -> Html {
         NavCategory {
             title: "Oferta Académica",
             items: vec![
-                NavItem { name: "Idiomas y cursos", href: "#" },
-                NavItem { name: "Talleres (Regulares / Sabatino)", href: "#" },
-                NavItem { name: "Formación (Material didáctico)", href: "#" },
-                NavItem { name: "Mocks (Exámenes de requisito)", href: "#" },
+                NavItem { name: "Informes generales", href: "#" },
+                NavItem { name: "Cursos de idiomas", href: "#" },
+                NavItem { name: "Talleres (L-V y Sabatino)", href: "#" },
+                NavItem { name: "Exámenes de certificación", href: "#" },
             ],
         },
         NavCategory {
-            title: "Inscripciones",
+            title: "Material Didáctico",
             items: vec![
-                NavItem { name: "Registro (Informes y servicios)", href: "#" },
-                NavItem { name: "Exámenes de certificación", href: "#" },
-                NavItem { name: "Informes generales", href: "#" },
+                NavItem { name: "Hojas de ejercicios", href: "#" },
+                NavItem { name: "Exámenes de práctica", href: "#" },
+            ],
+        },
+        NavCategory {
+            title: "Departamentos",
+            items: vec![
+                NavItem { name: "Registro", href: "#" },
+                NavItem { name: "Inglés", href: "#" },
+                NavItem { name: "Italiano", href: "#" },
+                NavItem { name: "Japonés", href: "#" },
             ],
         },
         NavCategory {
             title: "Comunidad",
             items: vec![
                 NavItem { name: "Difusión cultural", href: "#" },
-                NavItem { name: "Selita", href: "#" },
+                NavItem { name: "SELITA", href: "#" },
                 NavItem { name: "Podcast", href: "#" },
             ],
         },
@@ -55,7 +63,7 @@ pub fn navbar() -> Html {
             title: "Nosotros",
             items: vec![
                 NavItem { name: "¿Quiénes somos?", href: "#" },
-                NavItem { name: "Departamentos (Ing / Ita / Jp)", href: "#" },
+                NavItem { name: "Contáctanos", href: "#" },
             ],
         },
     ];
@@ -81,7 +89,7 @@ pub fn navbar() -> Html {
                                     </svg>
                                 </button>
                                 
-                                <div class="absolute top-full left-0 mt-2 w-64 opacity-0 translate-y-2 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-300 ease-in-out">
+                                <div class="absolute top-full left-0 mt-2 w-64 opacity-0 translate-y-2 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-300 ease-in-out ">
                                     <div class="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 overflow-hidden">
                                         { for cat.items.iter().map(|item| html! {
                                             <a href={item.href} class="block px-5 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-300 font-medium">
