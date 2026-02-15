@@ -17,6 +17,7 @@ pub fn home() -> Html {
                     <div class="relative z-10">
                         <h2 class="text-2xl md:text-4xl font-black text-[#0b2545] leading-tight italic">
                             {"Bienvenido al "}
+                            <br/>
                             <span class="text-blue-700">{"Centro de Enseñanza de Idiomas"}</span>
                         </h2>
                     </div>

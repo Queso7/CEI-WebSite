@@ -2,6 +2,7 @@
 name = "frontend"
 version = "0.1.0"
 edition = "2024"
+resolver = "3"
 
 [dependencies]
 yew ={ version = "0.22", features = ["csr"]}
