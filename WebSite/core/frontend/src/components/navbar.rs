@@ -63,6 +63,7 @@ pub fn navbar() -> Html {
             title: "Nosotros",
             items: vec![
                 NavItem { name: "¿Quiénes somos?", href: "#" },
+                NavItem { name: "Historia", href: "#" },
                 NavItem { name: "Contáctanos", href: "#" },
             ],
         },

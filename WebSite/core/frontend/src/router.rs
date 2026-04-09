@@ -6,6 +6,7 @@ use crate::pages::home::Home;
 pub enum Route {
     #[at("/")]
     Home,
+
     #[not_found]
     #[at("/404")]
     NotFound,
